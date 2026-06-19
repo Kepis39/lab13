@@ -60,18 +60,14 @@ namespace lab13.ViewModel
             set => SetProperty(ref _resultText, value);
         }
 
-        // ==========================================
-        // КОМАНДЫ (привязка к кнопкам в XAML)
-        // ==========================================
+
         public ICommand AddBookCommand { get; }
         public ICommand SaveToBinaryCommand { get; }
         public ICommand LoadFromBinaryCommand { get; }
         public ICommand SearchAuthorsCommand { get; }
         public ICommand AddSampleDataCommand { get; }
 
-        // ==========================================
-        // КОНСТРУКТОР
-        // ==========================================
+ 
         public BookViewModel()
         {
             AddBookCommand = new RelayCommand(_ => AddBook());
@@ -81,9 +77,7 @@ namespace lab13.ViewModel
             AddSampleDataCommand = new RelayCommand(_ => AddSampleData());
         }
 
-        // ==========================================
-        // МЕТОДЫ
-        // ==========================================
+
 
         private void AddBook()
         {
